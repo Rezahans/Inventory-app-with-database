@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5392959c-69a4-4827-91c7-e3e736c398f6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from inventory]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		<groupHeader>
+			<band height="34">
+				<textField>
+					<reportElement style="SubTitle" x="63" y="14" width="68" height="20" forecolor="#333333" uuid="9346a5da-7d10-4ede-a110-8ed0ecbc7563"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="SubTitle" x="129" y="14" width="68" height="20" uuid="305d9ddd-b6d7-4296-b225-aa0e4835e90a"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="SubTitle" x="200" y="14" width="63" height="20" forecolor="#333333" uuid="fdcd2313-6b46-4e17-a0d9-fd81fd6f3afb"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{jenis}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="SubTitle" x="263" y="14" width="60" height="20" uuid="386e0e58-f6c8-4137-b2fb-6507aa656294"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="12" y="10" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="aa478211-b3b7-4a2d-8baf-88d6c026a0cd"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="nama">
+		<groupExpression><![CDATA[$F{nama}]]></groupExpression>
+		<groupHeader>
+			<band height="19"/>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="5" width="263" height="33" uuid="b8fd953c-ac63-44c5-900f-b1325ba79016"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Wood Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="63" y="39" width="200" height="22" forecolor="#FFFFFF" uuid="5fa84564-d909-4e1b-a675-6fca57e78a1d"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Wood SubTitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="15" width="555" height="70" uuid="b06ce4ca-62f4-4061-9872-4058b080c29f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="35" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INVENTORY HANHANS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="ffb497fc-e602-4e47-bc85-d5dacfda3340"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="64" y="15" width="68" height="20" uuid="fef41469-79e8-41b0-a2f7-456b29c3cd7f"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="15" width="68" height="20" uuid="8952980c-c2c4-40e4-8ec3-6626ae0a04f5"/>
+				<text><![CDATA[JENIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="16" width="68" height="20" uuid="65ca9d97-1692-4751-9da2-2457c8a5479e"/>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="15" width="68" height="20" uuid="b68d60d6-8469-433f-917b-38c5d3bba338"/>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="ffd5c7e7-6334-4a1b-be7d-724474c07ae1"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="1352ac2a-b451-4aac-8a1e-ff62f41159c4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="20cb4920-f050-4184-9743-9a77613c32cf"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
